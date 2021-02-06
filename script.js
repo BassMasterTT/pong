@@ -2,7 +2,6 @@
 const { body } = document;
 const canvas = document.createElement('canvas');
 const context = canvas.getContext('2d');
-
 const width = 500;
 const height = 700;
 const screenWidth = window.screen.width;
@@ -55,7 +54,7 @@ function renderCanvas() {
   context.fillRect(0, 0, width, height);
 
   // Paddle Color
-  // context.fillStyle = 'white';
+  context.fillStyle = 'white';
 
   // Player Paddle (Bottom)
   // context.fillRect(paddleBottomX, height - 20, paddleWidth, paddleHeight);
