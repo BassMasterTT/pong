@@ -173,7 +173,6 @@ function computerAI() {
 
 function showGameOverEl(winner) {
   // Hide Canvas
-
   // // Container
   // gameOverEl.textContent = '';
   // gameOverEl.classList.add('game-over-container');
@@ -185,8 +184,6 @@ function showGameOverEl(winner) {
   // playAgainBtn.setAttribute('onclick', 'startGame()');
   // playAgainBtn.textContent = 'Play Again';
   // // Append
-
-  
 }
 
 // Check If One Player Has Winning Score, If They Do, End Game
@@ -205,13 +202,12 @@ function animate() {
   ballMove();
   ballBoundaries();
   computerAI();
-  
+  window.requestAnimationFrame(animate);
 }
 
 // Start Game, Reset Everything
 function startGame() {
   // if (isGameOver && !isNewGame) {
-
 
   // }
   // isGameOver = ;
@@ -222,7 +218,6 @@ function startGame() {
   createCanvas();
   animate();
   canvas.addEventListener('mousemove', (e) => {
-    console.log(e.clientX);
     playerMoved = true;
     // Compensate for canvas being centered
     paddleBottomX = e.clientX - canvasPosition - paddleDiff;
